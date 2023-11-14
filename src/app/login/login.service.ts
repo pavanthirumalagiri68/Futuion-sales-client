@@ -7,7 +7,7 @@ import { HttpClientService } from '../config/http-client.service';
 export class LoginService {
 
   // Update this URL based on your Docker setup
-  private backendUrl = 'http://localhost:8080';
+  private backendUrl = 'http://184.72.171.52:8080';
 
   constructor(private http: HttpClientService) { }
 
