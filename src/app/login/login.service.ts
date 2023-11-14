@@ -6,12 +6,15 @@ import { HttpClientService } from '../config/http-client.service';
 })
 export class LoginService {
 
+  // Update this URL based on your Docker setup
+  private backendUrl = 'http://localhost:8080';
+
   constructor(private http: HttpClientService) { }
 
   login(data: any) {
     console.log(data);
-    return this.http.login('/api/user/login', data);
+    const loginUrl = `${this.backendUrl}/api/user/login`;
+    return this.http.login(loginUrl, data);
   }
-
-
 }
+
